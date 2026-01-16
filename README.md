@@ -13,7 +13,7 @@ This project implements a full Business Intelligence pipeline using:
 
 Based on AdventureWorks2014 database.
 
-## 🏗 Architecture
+##  Architecture
 
 OLTP → Staging → Data Warehouse → SSAS → Power BI
 
@@ -29,7 +29,7 @@ OLTP → Staging → Data Warehouse → SSAS → Power BI
   - DimSalesTerritory
   - DimEmployee (SCD Type 2)
 
-## 🔁 ETL Process
+##  ETL Process
 
 - Source → Staging using SSIS
 - Staging → DW using Stored Procedures & SSIS
