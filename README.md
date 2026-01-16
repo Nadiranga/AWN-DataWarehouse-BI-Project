@@ -1,6 +1,10 @@
 # AdventureWorks Data Warehouse & BI Project
 
 
+## Screenshots
+
+![Dashboard](Documentation/PowerBI_Dashboard.png)
+
 ## Project Overview
 
 This project implements a full Business Intelligence pipeline using:
