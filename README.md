@@ -49,7 +49,7 @@ Features:
 
 ## Screenshots
 
-![Dashboard](Documentation/Power BI Dashboard.png)
+![Dashboard](Documentation/PowerBI_Dashboard.png)
 
 ## How to Run
 
