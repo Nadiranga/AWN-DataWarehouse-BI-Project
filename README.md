@@ -1,6 +1,5 @@
 # AdventureWorks Data Warehouse & BI Project
 
-## Author - Nadiranga Lakruwan Baranasuriya Patabendige
 
 ## Project Overview
 
