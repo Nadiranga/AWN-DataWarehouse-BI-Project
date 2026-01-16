@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SSIS_Staging", "AWN_ETL\SSIS_Staging.dtproj", "{4127E390-30AE-D95A-D74F-432DB0687129}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SSIS_DW", "SSIS_DW\SSIS_DW.dtproj", "{C30392A2-4026-6A7F-872A-F5F2795ACBEB}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ERP_Incremental_Load", "ERP_Incremental_Load\ERP_Incremental_Load.dtproj", "{B5FB82EA-4A40-AA18-D982-5B039BC24B8E}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SCD_Employee.dtsx", "SCD_Employee.dtsx\SCD_Employee.dtsx.dtproj", "{43CB94BA-1F19-10AD-9EE2-1C5BAF182284}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Fact_Sales.dtsx", "Fact_Sales.dtsx\Fact_Sales.dtsx.dtproj", "{20638199-E283-29BC-ECB0-4FA9DE2452B1}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Fact_InternetSales", "Fact_InternetSales\Fact_InternetSales.dtproj", "{9850C0B2-4A18-13D7-080D-1EC29411E549}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4127E390-30AE-D95A-D74F-432DB0687129}.Development|Default.ActiveCfg = Development
+		{4127E390-30AE-D95A-D74F-432DB0687129}.Development|Default.Build.0 = Development
+		{C30392A2-4026-6A7F-872A-F5F2795ACBEB}.Development|Default.ActiveCfg = Development
+		{C30392A2-4026-6A7F-872A-F5F2795ACBEB}.Development|Default.Build.0 = Development
+		{B5FB82EA-4A40-AA18-D982-5B039BC24B8E}.Development|Default.ActiveCfg = Development
+		{B5FB82EA-4A40-AA18-D982-5B039BC24B8E}.Development|Default.Build.0 = Development
+		{43CB94BA-1F19-10AD-9EE2-1C5BAF182284}.Development|Default.ActiveCfg = Development
+		{43CB94BA-1F19-10AD-9EE2-1C5BAF182284}.Development|Default.Build.0 = Development
+		{20638199-E283-29BC-ECB0-4FA9DE2452B1}.Development|Default.ActiveCfg = Development
+		{20638199-E283-29BC-ECB0-4FA9DE2452B1}.Development|Default.Build.0 = Development
+		{9850C0B2-4A18-13D7-080D-1EC29411E549}.Development|Default.ActiveCfg = Development
+		{9850C0B2-4A18-13D7-080D-1EC29411E549}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {022EBFD8-0FE7-4254-AA7B-F28D8B070E17}
+	EndGlobalSection
+EndGlobal

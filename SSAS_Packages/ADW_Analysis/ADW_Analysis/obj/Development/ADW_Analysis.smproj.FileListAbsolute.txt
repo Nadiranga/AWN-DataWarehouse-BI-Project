@@ -1,0 +1,8 @@
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\bin\Model.asdatabase
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\bin\Model.deploymenttargets
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\bin\Model.deploymentoptions
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\obj\Development\ADW_Analysis.smproj.AssemblyReference.cache
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\obj\Development\ADW_Analysis.smproj.CoreCompileInputs.cache
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\obj\Development\Model.asdatabase
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\obj\Development\Model.deploymentoptions
+C:\Users\nadir\source\repos\ADW_Analysis\ADW_Analysis\obj\Development\Model.deploymenttargets

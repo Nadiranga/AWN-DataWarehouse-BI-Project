@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/20/2025 12:16:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\nadir"
+  DTS:DTSID="{B59D8F18-4420-4334-A937-D0722CF9997E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{7A1C6F5B-812A-484F-A887-5171AF854630}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.AWN_DW_Demo]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+      DTS:ObjectName="LocalHost.AWN_DW_Demo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=AWN_DW_Demo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}LocalHost.AWN_DW_Demo;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.AWN_STG_Demo]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B66C4BF9-A763-418A-BB62-BD1333B8745D}"
+      DTS:ObjectName="localhost.AWN_STG_Demo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AWN_STG_Demo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{B66C4BF9-A763-418A-BB62-BD1333B8745D}localhost.AWN_STG_Demo;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Dimensions"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{B73C6771-DCB4-4BF1-8DE7-29020726C016}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Dimensions">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimCurrency"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8658B883-BCA9-4F3B-BC65-8A01ADF9173A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimCurrency"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCurrency]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimCustomer"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0DFE8866-59CF-4B03-81DD-C8CA181DCB77}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimCustomer"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCustomer]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimDate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{41A8217D-EDFF-45D5-8799-1736329F5654}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimDate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimDate]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimProduct"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{DF1459F4-5A22-423B-AD43-97C475DBFDED}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimProduct"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimProduct]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimReseller"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{CFA96354-BCA0-44AF-836E-8D73292FB459}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimReseller"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_Reseller]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Dimensions\Load DimSalesTerritory"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{24BDA80C-7721-48C4-A234-FFAC54AA9D43}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load DimSalesTerritory"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FD5B11FA-78CD-4C14-834C-336BD7CBDA05}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimSalesTerritory]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Load Dimensions\Load DimCurrency"
+          TopLeft="24.4571430760986,20.4117646073491" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\Load Dimensions\Load DimDate"
+          TopLeft="214.200000542828,22.5058822637919" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Load Dimensions\Load DimProduct"
+          TopLeft="25.6285715699803,79.8588233899905" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Load Dimensions\Load DimCustomer"
+          TopLeft="217.057143406053,85.9764704434517" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Load Dimensions\Load DimSalesTerritory"
+          TopLeft="24.2000001383679,141.035293924602" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Load Dimensions\Load DimReseller"
+          TopLeft="223.485714848309,144.094117451333" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="500.8,272"
+          Size="500.8,315.2"
+          Id="Package\Load Dimensions"
+          TopLeft="40.7142858009557,35.9411764390844" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
